@@ -35,7 +35,7 @@ public class RunTask {
         }
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
 
         WebDriver driver;
 
@@ -44,6 +44,7 @@ public class RunTask {
         ChromeOptions opt = new ChromeOptions();
         opt.addArguments("--start-maximized");
         driver = new ChromeDriver(opt);
+        Thread.sleep(5000);
         driver.navigate().to("https://fitpeo.com");
         out.println("Successfully Landed to the home page of FitPeo");
 
@@ -92,16 +93,7 @@ public class RunTask {
             selectingCPTCode(driver, "CPT-99457");
             selectingCPTCode(driver, "CPT-99474");
             selectingCPTCode(driver, "CPT-G2065");
-            Thread.sleep(50000);
-//            selectingCPTCode(driver, "CPT-99457");
-//            selectingCPTCode(driver, "CPT-99458");
-
-//            selectingCPTCode(driver, "CPT-99490");
-//            selectingCPTCode(driver, "CPT-99439");
-//            selectingCPTCode(driver, "CPT-99487");
-//            selectingCPTCode(driver, "CPT-99489");
-//            selectingCPTCode(driver, "CPT-G2064");
-
+            Thread.sleep(10000);
 
             System.out.println("Selected all required CPT codes.");
 
